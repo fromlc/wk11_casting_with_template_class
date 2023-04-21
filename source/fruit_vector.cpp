@@ -2,8 +2,9 @@
 // fruit_vector.cpp 
 //
 // Demos vector that
-//	- stores pointers to base class Fruit instances
-//	- cast pointers to process derived class Orange and Banana instances
+//	- uses vector of pointers to base class Fruit instances
+//	- vector can store pointers to derived class and base class instances
+//	- member variable fruitID identifies instance type: _FRUIT, ORANGE, BANANA
 //------------------------------------------------------------------------------
 #include "Fruit.h"
 
