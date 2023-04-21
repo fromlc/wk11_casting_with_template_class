@@ -24,7 +24,7 @@ using std::vector;
 //------------------------------------------------------------------------------
 vector<Fruit*>* getFruitVector();
 void displayFruits(vector<Fruit*>*);
-void deleteFruits(vector<Fruit*>*);
+void deleteFruits(vector<Fruit*>*&);
 
 //------------------------------------------------------------------------------
 // entry point
@@ -93,13 +93,17 @@ void displayFruits(vector<Fruit*>* pV) {
 }
 
 //------------------------------------------------------------------------------
-// delete vector elements
+// - delete vector elements
+// - delete vector and set passed reference pointer to nullptr
 //------------------------------------------------------------------------------
-void deleteFruits(vector<Fruit*>* pV) {
+void deleteFruits(vector<Fruit*>*& pV) {
 
 	// traverse vector of pointers with iterator this time
 	for (auto it = pV->begin(); it != pV->end(); ++it) {
 		delete (*it);
 	}
+
+	delete pV;
+	pV = nullptr;
 }
 
