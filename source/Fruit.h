@@ -28,16 +28,14 @@ class Fruit {
 public:
     int fruitID;
     string color;
-    int calories;
 
     // constructors
-    Fruit(int _fruitID, string _color, int _calories) {
+    Fruit(int _fruitID, string _color) {
         fruitID = _fruitID;
         color = _color;
-        calories = _calories;
     }
 
-    Fruit() : Fruit(_FRUIT, "none", 0) { }
+    Fruit() : Fruit(_FRUIT, "none") { }
 
 #ifdef LC_DEBUG
     ~Fruit() { cout << "Fruit destructor\n"; }
@@ -49,7 +47,7 @@ public:
 //------------------------------------------------------------------------------
 class Orange : public Fruit {
 public:
-    Orange() : Fruit::Fruit(ORANGE, "orange", 50) { }
+    Orange() : Fruit::Fruit(ORANGE, "orange") { }
 
 #ifdef LC_DEBUG
     ~Orange() { cout << "Orange destructor\n"; }
@@ -61,7 +59,7 @@ public:
 //------------------------------------------------------------------------------
 class Banana : public Fruit {
 public:
-    Banana() : Fruit::Fruit(BANANA, "yellow", 90) { }
+    Banana() : Fruit::Fruit(BANANA, "yellow") { }
 #ifdef LC_DEBUG
     ~Banana() { cout << "Banana destructor\n"; }
 #endif
