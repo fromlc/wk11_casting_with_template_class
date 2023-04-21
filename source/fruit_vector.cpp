@@ -59,7 +59,6 @@ vector<Fruit*>* getFruitVector() {
 	pV->push_back(pOrange);
 	pV->push_back(new Orange);
 	pV->push_back(new Banana);
-	pV->push_back((Banana*) new Banana);
 
 	// we can store base class pointers too
 	pV->push_back(new Fruit);
