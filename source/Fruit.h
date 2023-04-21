@@ -60,6 +60,7 @@ public:
 class Banana : public Fruit {
 public:
     Banana() : Fruit::Fruit(BANANA, "yellow") { }
+
 #ifdef LC_DEBUG
     ~Banana() { cout << "Banana destructor\n"; }
 #endif
