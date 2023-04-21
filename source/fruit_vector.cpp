@@ -67,7 +67,7 @@ vector<Fruit*>* getFruitVector() {
 }
 
 //------------------------------------------------------------------------------
-// local function prototypes
+// display vector elements
 //------------------------------------------------------------------------------
 void displayFruits(vector<Fruit*>* pV) {
 
