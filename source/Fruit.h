@@ -50,6 +50,7 @@ public:
 class Orange : public Fruit {
 public:
     Orange() : Fruit::Fruit(ORANGE, "orange", 50) { }
+
 #ifdef LC_DEBUG
     ~Orange() { cout << "Orange destructor\n"; }
 #endif
